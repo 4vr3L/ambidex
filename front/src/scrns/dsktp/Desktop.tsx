@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../components/ui/button";
+// import { Button } from "../../components/ui/button";
 import { ContactSection } from "./sections/ContactSection/ContactSection";
 import { FeaturesSection } from "./sections/FeaturesSection/FeaturesSection";
 import { FooterSection } from "./sections/FooterSection/FooterSection";
@@ -62,27 +62,28 @@ export const Desktop = (): JSX.Element => {
       data-model-id="1:2"
     >
       {/* Background gradient overlays */}
-      <div className="absolute top-0 left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.74]" />
+      {/* <div className="absolute top-0 left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.5]" /> */}
+      <div className="absolute top-0 right-20 w-[700px] h-[700px] bg-[radial-gradient(circle_at_55%_45%,rgba(191,255,0,0.2)_0%,transparent_67%)] pointer-events-none" />
 
-      <div className="absolute top-[2256px] left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] rotate-180 shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.74]" />
+      <div className="absolute top-[2256px] left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] rotate-180 shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[4]" />
 
       {/* Background image */}
-      <div className="absolute top-[269px] left-[-34px] w-[1370px] h-[1370px] rotate-[91.45deg]">
+      {/* <div className="absolute top-[260px] left-1/2 w-[1370px] h-[1370px] -translate-x-1/2 rotate-[181deg]">
         <img
-          className="absolute w-[102.50%] h-[102.50%] top-[-3.11%] left-0 rotate-[-91.45deg] object-cover"
+          className="w-full h-full rotate-[-90.45deg] object-cover"
           alt="Dsprsd"
           src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
         />
-      </div>
+      </div> */}
 
       <div className="absolute top-[513px] left-0 w-[1440px] h-[1324px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
 
       {/* Fixed Navigation */}
-      <nav className="fixed top-[50px] left-[100px] w-[1252px] h-[62px] flex z-50">
+      <nav className="fixed top-[50px] left-1/2 -translate-x-1/2 w-[1252px] h-[62px] flex z-50">
         <div className="w-[1252px] h-[62px] relative">
           <div className="absolute top-0 left-0 w-[1240px] h-[62px] bg-[#000000cc] rounded-[1000px] border-[none] backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] before:content-[''] before:absolute before:inset-0 before:p-px before:rounded-[1000px] before:[background:linear-gradient(184deg,rgba(191,255,0,0)_0%,rgba(191,255,0,0.29)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none" />
 
-          <div className="inline-flex items-center gap-[39px] absolute top-[17px] left-[calc(50.00%_-_226px)]">
+          <div className="inline-flex items-center gap-[39px] absolute top-[17px] left-1/2 -translate-x-1/2">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative h-7">
                 <a
@@ -110,18 +111,46 @@ export const Desktop = (): JSX.Element => {
       </nav>
 
       {/* Hero Section */}
-      <section className="absolute top-[150px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <HeroSection />
-      </section>
+            <div className="relative w-full flex flex-col items-center">
+  {/* HeroSection */}
+  <section className="relative z-10 mt-[180px] animate-fade-in opacity-0 [--animation-delay:0ms]">
+    <HeroSection />
+  </section>
 
+  {/* Rotated image right under HeroSection */}
+<div className="relative w-full flex justify-center mt-[-200px]">
+  <div className="w-[1370px] h-[1370px] rotate-[181deg]">
+    <img
+      className="w-full h-full rotate-[-90.45deg] object-cover"
+      alt="Dsprsd"
+      src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
+    />
+  </div>
+</div>
+</div>
+    {/* </div>  <div className="relative w-full flex flex-col items-center"> */}
+  {/* Rotated background image */}
+  {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1370px] h-[1370px] rotate-[181deg] z-0">
+    <img
+      className="w-full h-full rotate-[-90.45deg] object-cover"
+      alt="Dsprsd"
+      src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
+    />
+  </div>
+      <section className="absolute top-[180px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
+        <div className="flex justify-center w-full">
+          <HeroSection />
+        </div>
+      </section>
+      </div> */}
       {/* Contact Button */}
-      <div className="absolute top-[448px] left-[calc(50.00%_-_90px)] z-20 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+      {/* <div className="flex justify-center mt-10 animate-fade-in opacity-0 [--animation-delay:200ms]">
         <Button className="flex w-[177px] h-[42px] items-center justify-center gap-2.5 p-2.5 bg-[#bfff00] rounded-[1000px] hover:bg-[#a6e600] transition-colors duration-300">
           <span className="[font-family:'Montserrat',Helvetica] font-bold text-black text-[15px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
             Contactez-nous
           </span>
         </Button>
-      </div>
+      </div> */}
 
       <img
         className="absolute top-[650px] left-[102px] w-[1234px] h-[114px]"

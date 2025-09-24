@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../../../../components/ui/button";
 
 export const HeroSection = (): JSX.Element => {
   return (
@@ -33,6 +34,13 @@ export const HeroSection = (): JSX.Element => {
             src="https://c.animaapp.com/mftxaxohP9HH1n/img/vector-2.svg"
           />
         </div> */}
+        <div className="flex justify-center mt-2 animate-fade-in opacity-0 [--animation-delay:200ms]">
+          <Button className="flex w-[177px] h-[42px] items-center justify-center gap-2.5 p-2.5 bg-[#bfff00] rounded-[1000px] hover:bg-[#a6e600] transition-colors duration-300">
+            <span className="[font-family:'Montserrat',Helvetica] font-bold text-black text-[15px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
+              Contactez-nous
+            </span>
+          </Button>
+        </div>
       </div>
     </section>
   );
