@@ -42,13 +42,13 @@ export const ServicesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-[80px]">
-      <div className="max-w-[1242px] mx-auto px-[100px]">
+    <section className="relative w-full py-[650px]">
+      <div className="mx-auto px-[100px]">
         <h2 className="translate-y-[-1rem] animate-fade-in opacity-0 text-center [font-family:'Montserrat',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[49px] mb-[10px]">
           Nos Services
         </h2>
 
-        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] flex justify-center mb-[80px]">
+        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] flex justify-center mb-full">
           <img
             className="w-[246px] h-[22px]"
             alt="Vector"
@@ -56,7 +56,7 @@ export const ServicesSection = (): JSX.Element => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] mb-[80px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] w-full mb-[80px]">
           {services.map((service, index) => (
             <Card
               key={`service-${index}`}
@@ -67,7 +67,7 @@ export const ServicesSection = (): JSX.Element => {
                 } as React.CSSProperties
               }
             >
-              <CardContent className="relative p-0 h-full">
+              <CardContent className="relative p-0 w-full h-full">
                 <div
                   className={`${service.numberLeft} bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(0,0,0,1)_100%)] absolute top-[37px] w-[140px] h-[249px] flex items-center justify-center [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Montserrat',Helvetica] font-light text-transparent text-[250px] tracking-[0] leading-[normal] whitespace-nowrap`}
                 >
@@ -82,13 +82,8 @@ export const ServicesSection = (): JSX.Element => {
           ))}
         </div>
 
-        <Card className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1400ms] relative w-full h-[300px] bg-black rounded-[45px] border-none backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] before:content-[''] before:absolute before:inset-0 before:p-[3px] before:rounded-[45px] before:[background:linear-gradient(156deg,rgba(191,255,0,0.2)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none">
-          <CardContent className="relative p-0 h-full">
-            <img
-              className="absolute top-[21px] left-[253px] w-[210px] h-[205px]"
-              alt="Group"
-              src="https://c.animaapp.com/mftxaxohP9HH1n/img/group-13.png"
-            />
+        <Card className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1400ms] relative h-[300px] bg-black rounded-[45px] border-none backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] before:content-[''] before:absolute before:inset-0 before:p-[3px] before:rounded-[45px] before:[background:linear-gradient(156deg,rgba(191,255,0,0.2)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none">
+          <CardContent className="relative p-0 flex w-screen h-full">
 
             <div className="absolute w-[22.18%] h-[64.00%] top-[18.00%] left-[6.05%] [font-family:'Montserrat',Helvetica] font-medium text-white text-[90px] tracking-[0] leading-[96.4px]">
               Offre

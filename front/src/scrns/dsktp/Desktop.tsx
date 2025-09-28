@@ -57,51 +57,36 @@ const socialIcons = [
 export const Desktop = (): JSX.Element => {
   return (
     <div
-      className="bg-black overflow-hidden w-full min-w-[1440px] relative min-h-screen"
+      className="bg-black overflow-hidden w-full min-w-screen relative min-h-screen"
       style={{ height: '9200px' }}
       data-model-id="1:2"
     >
       {/* Background gradient overlays */}
-      {/* <div className="absolute top-0 left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[0.5]" /> */}
-      <div className="absolute top-0 right-20 w-[700px] h-[700px] bg-[radial-gradient(circle_at_55%_45%,rgba(191,255,0,0.2)_0%,transparent_67%)] pointer-events-none" />
-
-      <div className="absolute top-[2256px] left-[calc(50.00%_-_720px)] w-[1440px] h-[834px] rotate-180 shadow-[inset_0px_4px_191.6px_178px_#000000e0] bg-[linear-gradient(34deg,rgba(0,0,0,0.39)_0%,rgba(191,255,0,0.39)_100%)] opacity-[4]" />
-
-      {/* Background image */}
-      {/* <div className="absolute top-[260px] left-1/2 w-[1370px] h-[1370px] -translate-x-1/2 rotate-[181deg]">
-        <img
-          className="w-full h-full rotate-[-90.45deg] object-cover"
-          alt="Dsprsd"
-          src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
-        />
-      </div> */}
-
-      <div className="absolute top-[513px] left-0 w-[1440px] h-[1324px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
+      <div className="absolute top-0 right-[calc(47.50%_-_720px)] w-[1000px] h-[800px] bg-[radial-gradient(circle_at_60%_40%,rgba(191,255,0,0.2)_0%,transparent_45%)] pointer-events-none" 
+      style={{ transform: 'translateY(-100px)' }}
+      />
 
       {/* Fixed Navigation */}
       <nav className="fixed top-[50px] left-1/2 -translate-x-1/2 w-[1252px] h-[62px] flex z-50">
         <div className="w-[1252px] h-[62px] relative">
           <div className="absolute top-0 left-0 w-[1240px] h-[62px] bg-[#000000cc] rounded-[1000px] border-[none] backdrop-blur-[7.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(7.5px)_brightness(100%)] before:content-[''] before:absolute before:inset-0 before:p-px before:rounded-[1000px] before:[background:linear-gradient(184deg,rgba(191,255,0,0)_0%,rgba(191,255,0,0.29)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none" />
-
           <div className="inline-flex items-center gap-[39px] absolute top-[17px] left-1/2 -translate-x-1/2">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative h-7">
                 <a
                   href={item.href}
-                  className="[font-family:'Montserrat',Helvetica] font-medium text-[#949494] text-xl tracking-[0] leading-[27.1px] whitespace-nowrap hover:text-[#bfff00] transition-colors duration-300"
+                  className="[font-family:'Montserrat',Helvetica] font-medium text-[#949494] text-xl tracking-[0] leading-[27.1px] whitespace-nowrap hover:text-[#bfff00] hover:underline transition-colors duration-300"
                 >
                   {item.label}
                 </a>
               </div>
             ))}
           </div>
-
           <img
             className="absolute top-1.5 left-[1184px] w-[50px] h-[50px]"
             alt="Menu"
             src="https://c.animaapp.com/mftxaxohP9HH1n/img/group-30.svg"
           />
-
           <img
             className="absolute top-[22px] left-[31px] w-[134px] h-[18px]"
             alt="Logo"
@@ -109,67 +94,53 @@ export const Desktop = (): JSX.Element => {
           />
         </div>
       </nav>
-
       {/* Hero Section */}
-            <div className="relative w-full flex flex-col items-center">
-  {/* HeroSection */}
-  <section className="relative z-10 mt-[180px] animate-fade-in opacity-0 [--animation-delay:0ms]">
-    <HeroSection />
-  </section>
-
-  {/* Rotated image right under HeroSection */}
-<div className="relative w-full flex justify-center mt-[-200px]">
-  <div className="w-[1370px] h-[1370px] rotate-[181deg]">
-    <img
-      className="w-full h-full rotate-[-90.45deg] object-cover"
-      alt="Dsprsd"
-      src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
-    />
-  </div>
-</div>
-</div>
-    {/* </div>  <div className="relative w-full flex flex-col items-center"> */}
-  {/* Rotated background image */}
-  {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1370px] h-[1370px] rotate-[181deg] z-0">
-    <img
-      className="w-full h-full rotate-[-90.45deg] object-cover"
-      alt="Dsprsd"
-      src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
-    />
-  </div>
-      <section className="absolute top-[180px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <div className="flex justify-center w-full">
-          <HeroSection />
+      <div className="relative w-full flex flex-col items-center">
+        {/* HeroSection */}
+        <section className="relative z-20 mt-[180px] animate-fade-in opacity-0 [--animation-delay:0ms]">
+        <HeroSection />
+        </section>
+        {/* Rotated image right under HeroSection */}
+        <div className="mt-10 w-full h-full gap-4 flex-grow-0 justify-center items-center absolute">
+          <div className="w-full   h-[1370.2px] relative">
+            <div className="absolute inset-0  z-10"
+              style={{
+                background: 'linear-gradient(to top, #000000 0%, rgb(0,0,0,1) 60%, rgb(0,0,0,0.9) 65%,rgb(0,0,0,0.8) 70%, transparent 80%, transparent 100%)',
+                top: '20%', 
+                left: 0,
+                right: 0,
+                height: '100%', 
+              }}
+            />
+            <img
+            className="w-full h-full absolute transform origin-center"
+            alt="Dsprsd"
+            src="https://c.animaapp.com/mftxaxohP9HH1n/img/dsprsd.png"
+            style={{
+              transform: "translate(-5%, 16%) rotate(-270deg)",
+            }}
+            />
+            <img
+            className=" mt-60 w-full h-full justify-center items-center absolute z-10"
+            alt="Decorative frame"
+            src="https://c.animaapp.com/mftxaxohP9HH1n/img/frame-143.svg"
+            />
+          </div>
         </div>
-      </section>
-      </div> */}
-      {/* Contact Button */}
-      {/* <div className="flex justify-center mt-10 animate-fade-in opacity-0 [--animation-delay:200ms]">
-        <Button className="flex w-[177px] h-[42px] items-center justify-center gap-2.5 p-2.5 bg-[#bfff00] rounded-[1000px] hover:bg-[#a6e600] transition-colors duration-300">
-          <span className="[font-family:'Montserrat',Helvetica] font-bold text-black text-[15px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
-            Contactez-nous
-          </span>
-        </Button>
-      </div> */}
-
-      <img
-        className="absolute top-[650px] left-[102px] w-[1234px] h-[114px]"
-        alt="Decorative frame"
-        src="https://c.animaapp.com/mftxaxohP9HH1n/img/frame-143.svg"
-      />
-
-      {/* Services Section */}
-      <section className="absolute top-[700px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        <ServicesSection />
-      </section>
-
+      </div>
+      <div>
+        {/* Services Section */}
+        <section className="absolute w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+          <ServicesSection />
+        </section>
+      </div>
       {/* Projects Section */}
-      <section className="absolute top-[1400px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+      {/* <section className="absolute top-[1400px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
         <ProjectsSection />
-      </section>
+      </section> */}
 
       {/* Process Section Title */}
-      <div className="absolute top-[2100px] left-[435px] w-[667px] h-[89px] flex flex-col items-center gap-3 z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
+      {/* <div className="absolute top-[2100px] left-[435px] w-[667px] h-[89px] flex flex-col items-center gap-3 z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
         <h2 className="-ml-0.5 h-[49px] w-[665px] [font-family:'Montserrat',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[normal]">
           COMMENT PROCÉDONS NOUS?
         </h2>
@@ -179,20 +150,20 @@ export const Desktop = (): JSX.Element => {
           alt="Decorative line"
           src="https://c.animaapp.com/mftxaxohP9HH1n/img/vector-2047.svg"
         />
-      </div>
+      </div> */}
 
       {/* Statistics Section */}
-      <section className="absolute top-[2250px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
+      {/* <section className="absolute top-[2250px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
         <StatisticsSection />
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="absolute top-[3100px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms]">
+      {/* <section className="absolute top-[3100px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms]">
         <TeamSection />
-      </section>
+      </section> */}
 
       {/* Instagram Section */}
-      <section className="absolute top-[4200px] left-[calc(50.00%_-_735px)] w-[1473px] h-[822px] flex flex-col z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1400ms]">
+      {/* <section className="absolute top-[4200px] left-[calc(50.00%_-_735px)] w-[1473px] h-[822px] flex flex-col z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1400ms]">
         <h2 className="ml-[18.1px] h-[49px] w-[215px] self-center [font-family:'Montserrat',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[normal]">
           Instagram
         </h2>
@@ -225,20 +196,20 @@ export const Desktop = (): JSX.Element => {
           alt="Decorative element"
           src="https://c.animaapp.com/mftxaxohP9HH1n/img/vector-2035.svg"
         />
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="absolute top-[5200px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1600ms]">
+      {/* <section className="absolute top-[5200px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1600ms]">
         <FeaturesSection />
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section className="absolute top-[6800px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1800ms]">
+      {/* <section className="absolute top-[6800px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1800ms]">
         <ContactSection />
-      </section>
+      </section> */}
 
       {/* Social Icons */}
-      <div className="absolute top-[8200px] left-[581px] w-[277px] h-16 flex justify-center z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2000ms]">
+      {/* <div className="absolute top-[8200px] left-[581px] w-[277px] h-16 flex justify-center z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2000ms]">
         <div className="inline-flex w-[277.33px] h-16 relative items-start gap-[42.67px]">
           {socialIcons.map((icon, index) => (
             <img
@@ -249,7 +220,7 @@ export const Desktop = (): JSX.Element => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Footer Section */}
       <section className="absolute top-[8400px] left-0 w-full z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2200ms]">
@@ -257,11 +228,11 @@ export const Desktop = (): JSX.Element => {
       </section>
 
       {/* Decorative frames */}
-      <img
+      {/* <img
         className="absolute top-[932px] left-[102px] w-[1234px] h-[114px]"
         alt="Decorative frame"
         src="https://c.animaapp.com/mftxaxohP9HH1n/img/frame-143.svg"
-      />
+      /> */}
 
       <img
         className="absolute top-[5145px] left-[103px] w-[1234px] h-[114px]"

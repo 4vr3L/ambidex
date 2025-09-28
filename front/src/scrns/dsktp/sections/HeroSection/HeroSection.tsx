@@ -26,16 +26,8 @@ export const HeroSection = (): JSX.Element => {
           </span>
           <span className="font-bold text-white">un clic!</span>
         </p>
-
-        {/* <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] relative mt-[20px]">
-          <img
-            className="w-[324px] h-11"
-            alt="Vector"
-            src="https://c.animaapp.com/mftxaxohP9HH1n/img/vector-2.svg"
-          />
-        </div> */}
         <div className="flex justify-center mt-2 animate-fade-in opacity-0 [--animation-delay:200ms]">
-          <Button className="flex w-[177px] h-[42px] items-center justify-center gap-2.5 p-2.5 bg-[#bfff00] rounded-[1000px] hover:bg-[#a6e600] transition-colors duration-300">
+          <Button className="flex w-[177px] h-[42px] items-center justify-center gap-2.5 p-2.5 bg-[#bfff00] rounded-[1000px] transition hover:bg-white hover:text-black duration-300">
             <span className="[font-family:'Montserrat',Helvetica] font-bold text-black text-[15px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
               Contactez-nous
             </span>
